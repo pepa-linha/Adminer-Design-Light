@@ -1,5 +1,7 @@
 /*
- * Theme by Pepa Linha [http://webdream.cz] - February 2014, ver 0.1
+ * Theme by Pepa Linha [http://webdream.cz]
+ * JUSH color syntax inspired by NetBeans
+ * @version 0.2 (February 2014)
  */
 
 html,
@@ -32,6 +34,11 @@ h2 {
 	margin-bottom: 40px;
 }
 
+.rtl h2 {
+	margin: 0;
+	margin-bottom: 40px;
+}
+
 h3 {
 	font-size: 22px;
 	margin: 0 0 10px;
@@ -42,6 +49,7 @@ h3 {
 
 p {
 	margin: 0;
+	margin-bottom: 15px;
 }
 
 a {
@@ -138,13 +146,27 @@ table.checkable tbody tr:hover th {
 	background: #f5f5f5;
 }
 
-
 fieldset {
-	display: block;
+	display: inline-block;
 	padding: 15px;
+	padding-top: 5px;
 	margin: 0 0 15px;
 	border: 0;
 	background: #f5f5f5;
+}
+
+fieldset select {
+	margin-right: 5px;
+}
+
+fieldset input[type=button],
+fieldset input[type=submit],
+fieldset p {
+	margin-bottom: 0;
+}
+
+fieldset div p {
+	margin-top: 10px;
 }
 
 legend {
@@ -196,6 +218,14 @@ p code + a:visited:hover {
 
 #content > p {
 	margin-bottom: 15px;
+}
+
+.rtl #content {
+	margin: 0;
+	margin-left: 54px;
+	margin-right: 400px;
+	padding: 0;
+	padding-top: 50px;
 }
 
 #menu {
@@ -301,6 +331,7 @@ p code + a:visited:hover {
 #content p.links a.active {
 	font-weight: normal;
 	border: 1px solid #2e84e4;
+	background: #f4f8fd;
 }
 
 #tables {
@@ -310,7 +341,14 @@ p code + a:visited:hover {
 	left: 15px;
 	right: 15px;
 	bottom: 0;
-	top: 220px;
+	top: 220px;o
+	overflow: hidden !important;
+	overflow-y: auto !important;
+}
+
+.rtl #tables {
+	overflow: hidden !important;
+	overflow-y: auto !important;
 }
 
 #tables a {
@@ -318,9 +356,20 @@ p code + a:visited:hover {
 	padding: 6px 15px;
 }
 
+.rtl #tables a {
+	float: none;
+}
+
 #tables a[title] {
 	float: none;
 	display: block;
+}
+
+.rtl #tables a:first-child,
+.rtl #tables br + a {
+	float: left;
+	display: block;
+	margin-left: 15px;
 }
 
 #tables a:hover,
@@ -349,6 +398,8 @@ p code + a:visited:hover {
 	color: #fff;
 	font-weight: bold;
 	border: 0;
+	display: inline-block;
+	position: static;
 }
 
 .pages a,
@@ -379,10 +430,23 @@ p code + a:visited:hover {
 	color: #666;
 }
 
-.logout {
+.rtl #breadcrumb {
+	margin: 0;
+	padding: 0;
+	padding-top: 25px;
+	right: 400px;
+}
+
+.logout,
+.rtl .logout {
 	top: 30px;
 	right: 54px;
 	margin: 0;
+}
+
+.rtl .logout {
+	right: auto;
+	left: 54px;
 }
 
 input:not([type]),
@@ -396,8 +460,8 @@ input[type="text"],
 input[type="search"] {
 	border: 1px solid #bbbbbb;
 	padding: 6px;
-	
 	margin: 0;
+	box-sizing: border-box;
 }
 
 table:not(#table) input:not([type]),
@@ -423,6 +487,7 @@ input[type=button] {
 	color: #fff;
 	font-weight: bold;
 	margin-bottom: 5px;
+	transition: background .4s ease;
 }
 
 input[type=submit][disabled],
@@ -464,6 +529,7 @@ select {
 
 label {
 	cursor: pointer;
+	margin-right: 6px;
 }
 
 .error,
@@ -476,14 +542,6 @@ label {
 #tables a,
 #tables span {
 	background: none;
-}
-
-fieldset {
-	display: inline-block;
-}
-
-fieldset select {
-	margin-right: 5px;
 }
 
 #form > p {
@@ -510,6 +568,85 @@ fieldset select {
 #schema .table span {
 	display: block;
 	margin-bottom: 1px solid #f5f5f5;
+}
+
+#lang {
+	position: fixed;
+	top: 55px;
+	right: 100%;
+	z-index: 10;
+	margin-right: -331px;
+	line-height: normal;
+	padding: 0;
+	left: auto;
+	font-size: 0;
+}
+
+#lang select {
+	font-size: 12px;
+	padding: 0;
+	text-align: right;
+	border: 0;
+	background: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	outline: 0;
+}
+
+#lang select option {
+	text-align: right;
+}
+
+.rtl #lang {
+	margin-right: 0;
+	left: 100%;
+	margin-left: -261px;
+	right: auto;
+}
+
+.jush {
+	color: #000;
+}
+
+.jush a {
+	color: #3939f2;
+}
+
+.jush-sql a,
+.jush-sql_code a,
+.jush-sqlite a,
+.jush-pgsql a,
+.jush-mssql a,
+.jush-oracle a,
+.jush-simpledb a {
+	font-weight: normal;
+}
+
+.jush-bac,
+.jush-php_bac,
+.jush-bra,
+.jush-mssql_bra,
+.jush-sqlite_quo {
+	color: #009900;
+}
+
+.jush-php_quo,
+.jush-quo,
+.jush-quo_one,
+.jush-php_eot,
+.jush-apo,
+.jush-sql_apo,
+.jush-sqlite_apo,
+.jush-sql_quo,
+.jush-sql_eot {
+	color: #ce7b00;
+}
+
+.jush-num,
+.jush-clr {
+	color: #000;
 }
 
 @media print {
