@@ -1,7 +1,7 @@
 /*
  * Theme by Pepa Linha [http://webdream.cz]
  * JUSH color syntax inspired by NetBeans
- * @version 0.2 (February 2014)
+ * @version 0.2.2
  */
 
 html,
@@ -10,7 +10,7 @@ body {
 }
 
 body {
-	font-family: "Segoe UI", Arial, sans-serif;
+	font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 h1 {
@@ -21,35 +21,30 @@ h1 {
 }
 
 h2 {
-	margin: 0;
-	padding: 0;
+	margin: 0 0 40px;
+	padding: 0 0 6px;
 	background: none;
 	border: 0;
-	font-family: "Segoe UI Light", "Segoe UI", Arial, sans-serif;
+	font-family: "Segoe UI Light", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 	font-size: 32px;
 	font-weight: normal;
 	color: #34567c;
 	border-bottom: 1px solid #ebebeb;
-	padding-bottom: 6px;
-	margin-bottom: 40px;
 }
 
 .rtl h2 {
-	margin: 0;
-	margin-bottom: 40px;
+	margin: 0 0 40px;
 }
 
 h3 {
 	font-size: 22px;
 	margin: 0 0 10px;
 	border-bottom: 1px solid #ebebeb;
-	padding: 0;
-	padding-bottom: 6px;
+	padding: 0 0 6px;
 }
 
 p {
-	margin: 0;
-	margin-bottom: 15px;
+	margin: 0 0 15px;
 }
 
 a {
@@ -74,8 +69,7 @@ a[href*=charsets] {
 
 table {
 	border: 0;
-	margin: 0;
-	margin-top: 15px;
+	margin: 15px 0 0;
 }
 
 th, td {
@@ -148,8 +142,7 @@ table.checkable tbody tr:hover th {
 
 fieldset {
 	display: inline-block;
-	padding: 15px;
-	padding-top: 5px;
+	padding: 5px 15px 15px;
 	margin: 0 0 15px;
 	border: 0;
 	background: #f5f5f5;
@@ -174,7 +167,7 @@ legend {
 	padding: 6px 15px;
 	margin: 0 0 0 -15px;
 	background: #f5f5f5;
-	font-family: "Segoe UI Semibold", "Segoe UI", Arial, sans-serif;
+	font-family: "Segoe UI Semibold", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 legend a,
@@ -209,11 +202,8 @@ p code + a:visited:hover {
 }
 
 #content {
-	margin: 0;
-	margin-left: 400px;
-	margin-right: 54px;
-	padding: 0;
-	padding-top: 50px;
+	margin: 0 54px 0 400px;
+	padding: 50px 0 0;
 }
 
 #content > p {
@@ -221,11 +211,8 @@ p code + a:visited:hover {
 }
 
 .rtl #content {
-	margin: 0;
-	margin-left: 54px;
-	margin-right: 400px;
-	padding: 0;
-	padding-top: 50px;
+	margin: 0 400px 0 54px;
+	padding: 50px 0 0;
 }
 
 #menu {
@@ -233,7 +220,6 @@ p code + a:visited:hover {
 	border-right: 1px solid #dae8fa;
 	box-shadow: inset -1px 0 0 #fff;
 	margin: 0;
-	padding: 0;
 	top: 0;
 	background: #f4f8fd;
 	bottom: 0;
@@ -415,8 +401,7 @@ p code + a:visited:hover {
 	margin: 0;
 	left: 400px;
 	background: none;
-	padding: 0;
-	padding-top: 25px;
+	padding: 25px 0 0;
 	font-size: 12px;
 }
 
@@ -432,8 +417,7 @@ p code + a:visited:hover {
 
 .rtl #breadcrumb {
 	margin: 0;
-	padding: 0;
-	padding-top: 25px;
+	padding: 25px 0 0;
 	right: 400px;
 }
 
@@ -534,8 +518,7 @@ label {
 
 .error,
 .message {
-	margin: 0;
-	margin-bottom: 15px;
+	margin: 0 0 15px;
 }
 
 #logins a,
@@ -554,8 +537,7 @@ label {
 
 #schema .table a {
 	display: block;
-	margin: -6px;
-	margin-bottom: 6px;
+	margin: -6px -6px 6px;
 	padding: 6px;
 	color: #fff;
 	background: #34567c;
@@ -567,7 +549,7 @@ label {
 
 #schema .table span {
 	display: block;
-	margin-bottom: 1px solid #f5f5f5;
+	border-bottom: 1px solid #f5f5f5;
 }
 
 #lang {
@@ -653,11 +635,11 @@ label {
 	.logout {
 		display: none;
 	}
-	
+
 	#breadcrumb {
 		position: static;
 	}
-	
+
 	#content {
 		margin: 0;
 	}
