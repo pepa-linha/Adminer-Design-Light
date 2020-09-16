@@ -216,7 +216,7 @@ p code + a:visited:hover {
 }
 
 #menu {
-	width: 347px;
+	width: auto;
 	border-right: 1px solid #dae8fa;
 	box-shadow: inset -1px 0 0 #fff;
 	margin: 0;
